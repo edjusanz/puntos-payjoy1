@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Beneficios por Puntos Payjoy</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E0F7C2; /* Verde más suave */
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Logo de Payjoy */
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los puntos */
+        .puntos {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el mensaje de motivación */
+        .motivacion {
+            font-size: 18px;
+            color: #00471D;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el botón de canje */
+        .boton-canje {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #42BF00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .boton-canje:hover {
+            background-color: #369700; /* Verde más oscuro al pasar el mouse */
+        }
+
+        /* Estilos para la sección de detalles */
+        .detalles {
+            margin-top: 30px;
+            text-align: left;
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .detalles h3 {
+            color: #00471D;
+            margin-bottom: 10px;
+        }
+
+        .detalles p {
+            margin: 5px 0;
+        }
+
+        /* Animación de las esferas */
+        .esfera {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #8DAF54;
+            border-radius: 50%;
+            animation: rebotar 5s infinite ease-in-out;
+        }
+
+        @keyframes rebotar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Esferas animadas -->
+    <div class="esfera" style="top: 10%; left: 5%;"></div>
+    <div class="esfera" style="top: 20%; left: 20%;"></div>
+    <div class="esfera" style="top: 30%; left: 40%;"></div>
+    <div class="esfera" style="top: 40%; left: 60%;"></div>
+    <div class="esfera" style="top: 50%; left: 80%;"></div>
+    <div class="esfera" style="top: 60%; left: 90%;"></div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Logo de Payjoy -->
+        <img src="https://www.payjoy.com/wp-content/uploads/2021/05/logo.svg" alt="Logo Payjoy" class="logo">
+
+        <!-- Puntos acumulados -->
+        <div class="puntos">
+            <h2>Tienes acumulado <span style="color: #42BF00;">2000 puntos</span></h2>
+            <h3>1500 Válidos</h3>
+        </div>
+
+        <!-- Mensaje de motivación -->
+        <div class="motivacion">
+            <p>¡Tu % de Morosidad es del 8%! Vas muy bien, sigue generando más financiamientos.</p>
+        </div>
+
+        <!-- Botón de canje -->
+        <a href="#" class="boton-canje">Canjea tus puntos aquí</a>
+
+        <!-- Detalles de Admin, Merchant y Clerk's -->
+        <div class="detalles">
+            <h3>Detalles de Puntos</h3>
+            <p><strong>Admin:</strong> PAYJOYPRUEBA - 1500 puntos</p>
+            <p><strong>Merchant:</strong></p>
+            <ul>
+                <li>PAYJOYOLGUIN - 1000 puntos</li>
+                <li>PAYJOYSURCO - 500 puntos</li>
+            </ul>
+            <p><strong>Clerk's:</strong></p>
+            <ul>
+                <li>ElPite - 500 puntos</li>
+                <li>Omarichi - 500 puntos</li>
+                <li>Pepito - 500 puntos</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Script para animar las esferas -->
+    <script>
+        const esferas = document.querySelectorAll('.esfera');
+        esferas.forEach((esfera, index) => {
+            esfera.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            esfera.style.animationDelay = `${Math.random() * 2}s`;
+        });
+    </script>
+</body>
+</html>
